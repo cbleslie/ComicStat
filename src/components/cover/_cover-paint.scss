@@ -1,0 +1,8 @@
+[data-cover] {
+  background-color: $cover-background-color;
+
+  .no-cover {
+    color: $cover-no-cover-color;
+    text-shadow: $cover-no-cover-text-shadow;
+  }
+}

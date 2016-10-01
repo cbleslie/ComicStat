@@ -1,0 +1,25 @@
+//ITCSS
+//https://youtu.be/1OKZOV-iLj4?t=31m31s
+
+//Settings
+@import './settings/variables';
+//Tools
+@import '../node_modules/logjam-scss/logjam';
+//Generic
+@import './generic/normalize';
+@import './generic/anti-shudder';
+//Base
+@import './base/elements-structure';
+@import './base/elements-paint';
+//Objects
+@import './objects/layout-main';
+//Components
+@import './components/main/main-structure';
+@import './components/main/main-paint';
+@import './components/cover/cover-structure';
+@import './components/cover/cover-paint';
+@import './components/title/title-structure';
+@import './components/title/title-paint';
+@import './components/graph/graph-structure';
+@import './components/graph/graph-paint';
+//Trumps

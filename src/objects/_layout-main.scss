@@ -1,0 +1,66 @@
+$main: (
+  layout-name: 'main',
+  margin-size: 1rem,
+  breakpoints: (
+    mobile-small: (
+      size: $breakpoint-mobile-small,
+      area: (
+        cover: (
+          grow: 0,
+          shrink: 0,
+          basis: 6rem,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          ),
+        ),
+        info: (
+          grow: 1,
+          shrink: 1,
+          basis: 0%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        )
+      )
+    ),
+    tablet: (
+      size: $breakpoint-tablet,
+      area: (
+        cover: (
+          grow: 0,
+          shrink: 0,
+          basis: 6rem,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          ),
+        ),
+        info: (
+          grow: 1,
+          shrink: 1,
+          basis: 0%,
+          order: 0,
+          margin: (
+            bottom: true,
+            left: true,
+            right: true,
+            top: true
+          )
+        )
+      )
+    ),
+  )
+);
+
+@include logjam($main);

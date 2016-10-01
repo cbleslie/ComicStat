@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+//Colors
+////////////////////////////////////////////////////////////////////////////////
+$black-pearl: rgba(33, 37, 43, 1);
+$pumice: rgba(197, 197, 196, 1);
+$old-brick: rgba(140, 27, 23, 1);
+// $chelsa-gem: rgba(157, 82, 0, 1);
+$saphire: rgba(23, 85, 182, 1);
+
+////////////////////////////////////////////////////////////////////////////////
+//Primes
+////////////////////////////////////////////////////////////////////////////////
+//Generic
+$surface-color: $black-pearl;
+$body-text-color: $pumice;
+$negitive: $old-brick;
+// $careful: $chelsa-gem;
+$prefered: $saphire;
+
+//Shadow
+$shadow: $surface-color;
+
+//Text Shadow
+$text-shadow-color: $shadow;
+$text-shadow-opacity: 1;
+$text-shadow-distance: 1px;
+$text-shadow-blur: 0;
+
+$text-shadow-down: 0 $text-shadow-distance $text-shadow-blur rgba($text-shadow-color, $text-shadow-opacity);
+
+//Box-Shadow
+$box-shadow-distance: .5rem;
+$box-shadow-opacity: .1;
+$box-shadow-color: darken($shadow, 10%);
+$box-shadow-blur: 0;
+$box-shadow-spread: 0;
+
+$box-shadow-right: $box-shadow-distance 0 $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
+$box-shadow-down: 0 $box-shadow-distance $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
+$box-shadow-left: -$box-shadow-distance 0 $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
+$box-shadow-up: 0 -$box-shadow-distance $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
+
+////////////////////////////////////////////////////////////////////////////////
+//Main
+////////////////////////////////////////////////////////////////////////////////
+$main-background-color: $surface-color;
+
+////////////////////////////////////////////////////////////////////////////////
+//Primary Menu
+////////////////////////////////////////////////////////////////////////////////
+$primary-menu-background-color: lighten($surface-color, 3%);
+$primary-menu-border-right-width: 1px;
+$primary-menu-border-right-style: solid;
+$primary-menu-border-right-color: lighten($surface-color, 10%);
+$primary-menu-box-shadow: $box-shadow-right;
+
+////////////////////////////////////////////////////////////////////////////////
+//Cover
+////////////////////////////////////////////////////////////////////////////////
+$cover-background-color: lighten($surface-color, 3%);
+$cover-box-shadow: $box-shadow-down;
+$cover-border-color: lighten($surface-color, 10%);
+$cover-border-width: 1px;
+$cover-border-style: solid;
+$cover-border-radius: 0;
+$cover-no-cover-color: lighten($surface-color, 15%);
+$cover-no-cover-text-shadow: $text-shadow-down;

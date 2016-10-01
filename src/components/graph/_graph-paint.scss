@@ -1,0 +1,31 @@
+$bubble-color: #000;
+$bubble-background-color: #fff;
+$bubble-border-radius: .2rem;
+$bar-container-hover-background: rgba(0, 0, 0, .2);
+
+[data-graph] {
+  .bar-container {
+    &:hover {
+      background-color: $bar-container-hover-background;
+      //scss-lint:disable NestingDepth
+      .bar {
+        background-color: lighten($surface-color, 30%);
+      }
+    }
+  }
+
+  .bar {
+    background-color: lighten($surface-color, 10%);
+    border-radius: 2px 2px 0 0;
+
+    &::before {
+      background-color: $bubble-background-color;
+      border-radius: $bubble-border-radius;
+      color: $bubble-color;
+    }
+
+    &::after {
+      border-color: transparent $bubble-background-color transparent transparent;
+    }
+  }
+}

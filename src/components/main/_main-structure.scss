@@ -1,0 +1,19 @@
+[data-main] {
+  // outline: 1px solid #ff0000;
+  width: 100%;
+
+  [data-area~="info"] {
+    .wrapper {
+      height: calc(100% - 1rem);
+      position: relative;
+      z-index: 0;
+    }
+  }
+
+  [data-graph] {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}

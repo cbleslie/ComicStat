@@ -1,0 +1,9 @@
+[data-title] {
+  font-size: 1.2em;
+  pointer-events: none;
+
+  .title,
+  .publisher {
+    display: inline-block;
+  }
+}

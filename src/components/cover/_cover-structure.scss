@@ -1,0 +1,21 @@
+[data-cover] {
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  // image-rendering: -webkit-optimize-contrast; //This ensures that thre is no rendering "pop" when the image is translated.
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .no-cover {
+    position: absolute;
+    top: calc(50% - .5rem);
+    width: 100%;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 143%;
+  }
+}
