@@ -2,24 +2,49 @@ import React from "react";
 import { Cover } from "../cover/cover.jsx"
 import { Title } from "../title/title.jsx"
 import { Graph } from "../graph/graph.jsx"
+import * as Axios from "axios"
+
 
 var Main = React.createClass({
+
+  getInitialState: function() {
+    return {
+      title: 'Not Avaliable',
+      publisher: 'Unknown',
+    }
+  },
+
+  componentDidMount: function() {
+    var context = this;
+    var request = Axios
+      .get(this.props.source)
+      .then(function(result) {
+        context.setState({
+          data: result.data
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    this.setState({
+      cover: this.props.cover,
+      title: this.props.title,
+      publisher: this.props.publisher,
+    });
+  },
+
   render: function() {
-    // console.log(this.props.data);
-    var cover = this.props.data.cover,
-        title = this.props.data.title,
-        publisher = this.props.data.publisher
     return (
       <div data-main data-layout="main">
         <div data-area="cover">
           <div className="wrapper">
-            <Cover cover={cover}/>
+            <Cover cover={this.state.cover}/>
           </div>
         </div>
         <div data-area="info">
           <div className="wrapper">
-            <Graph data={null}/>
-            <Title title={title} publisher={publisher}/>
+            <Graph data={this.state.data}/>
+            <Title title={this.state.title} publisher={this.state.publisher}/>
           </div>
         </div>
       </div>

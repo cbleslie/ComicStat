@@ -38,7 +38,7 @@ $box-shadow-spread: 0;
 $box-shadow-right: $box-shadow-distance 0 $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
 $box-shadow-down: 0 $box-shadow-distance $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
 $box-shadow-left: -$box-shadow-distance 0 $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
-$box-shadow-up: 0 -$box-shadow-distance $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
+$box-shadow-up: 0 -#{$box-shadow-distance} $box-shadow-blur $box-shadow-spread rgba($box-shadow-color, $box-shadow-opacity);
 
 ////////////////////////////////////////////////////////////////////////////////
 //Main

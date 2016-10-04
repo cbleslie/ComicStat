@@ -3,12 +3,20 @@
   height: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
+  position: relative;
   width: 100%;
+
+  .no-data {
+    position: absolute;
+    text-align: center;
+    top: calc(50% - .5rem);
+    width: 100%;
+  }
 
   .bar-container {
     align-items: flex-end;
     display: flex;
-    flex: 0 0 .5rem;
+    flex: 0 0 .6rem;
     height: calc(100% - 2rem);
     position: relative;
 
@@ -35,6 +43,7 @@
         &::before,
         &::after {
           opacity: 1;
+          transform: translateX(0);
         }
       }
     }
@@ -70,9 +79,10 @@
       content: attr(data-value);
       display: block;
       font-size: .8rem;
-      left: 0;
+      left: calc(50% + .3rem);
       padding: .20rem .5rem;
       position: absolute;
+      white-space: nowrap;
       z-index: 1;
     }
 
@@ -83,7 +93,7 @@
       content: '';
       display: block;
       height: 0;
-      left: -.4rem;
+      left: 50%;
       position: absolute;
       width: 0;
       z-index: 1;

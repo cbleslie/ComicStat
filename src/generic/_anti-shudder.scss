@@ -8,6 +8,6 @@ html {
   // Setting this smoothing beforehand prevents an ugly flickering of font
   // "thickness" when animations start and stop. Browsers use this simpler font
   // smoothing to save on resources when animating or transitioning elements.
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
