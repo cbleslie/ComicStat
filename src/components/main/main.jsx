@@ -15,14 +15,13 @@ var Main = React.createClass({
   },
 
   componentDidMount: function() {
-    var context = this;
     var request = Axios
       .get(this.props.source)
       .then(function(result) {
-        context.setState({
+        this.setState({
           data: result.data
         });
-      })
+      }.bind(this))
       .catch(function (error) {
         console.log(error);
       });
