@@ -19,7 +19,7 @@ var Main = React.createClass({
       .get(this.props.source)
       .then(function(result) {
         this.setState({
-          data: result.data
+          data: result.data.records
         });
       }.bind(this))
       .catch(function (error) {
